@@ -6,7 +6,7 @@ The purpose of this challenge is to create a quiz and test the users knowledge.
 4. Rank user depending on how many questions they answered correctly.
 
 
-I chose to choose questions based on Converse history.
+These are a few basic questions over the history of Converse.
 */
 
 
@@ -88,4 +88,3 @@ f (score === 5) {
 //fianl score
 
 document.write('<h2> You scored ' + score + ' out of 5</h2>' + '<br>' + rank );
-
