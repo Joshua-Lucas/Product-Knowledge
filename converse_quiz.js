@@ -1,3 +1,6 @@
+//create a function that calls for credientials of asscoates. 
+
+
 /*
 The purpose of this challenge is to create a quiz and test the users knowledge.
 1. Must ask 5 questions
