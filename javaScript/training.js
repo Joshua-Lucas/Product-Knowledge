@@ -1,4 +1,4 @@
-//create a function that calls for credientials of asscoates. 
+//create a function that calls for credientials of asscoiates. 
 function credientials (EmployeeId) {
     if(isNaN(EmployeeId)){
         alert('Error! Please retype your employee ID number.')
