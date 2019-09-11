@@ -1,4 +1,6 @@
-/* basic styles--------------------*/
+/* ================================= 
+  Base Element Styles
+==================================== */
 * {
     box-sizing: border-box;
   }
@@ -40,9 +42,11 @@ ul {
     border-bottom: 2px dotted gray;
     padding: 100px 0 100px;
     background: black;
-
-
 } 
+
+/* ================================= 
+  Base Layout Styles
+==================================== */
 /* id Styles-------------------- */
 #intro {
     color:gainsboro;
@@ -93,5 +97,8 @@ a:link {
 } 
     
 
-
-
+/* ---- Layout Containers ---- */
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
