@@ -8,7 +8,6 @@
 body{
     background: #000;
     color: #878787;
-    margin: 0;
     font: 1em/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
@@ -47,13 +46,12 @@ ul {
 /* ================================= 
   Base Layout Styles
 ==================================== */
+
 /* id Styles-------------------- */
 #intro {
     color:gainsboro;
     padding: 50px;
-    background: 
-    linear-gradient(0deg,darkgray,transparent 100%)
-
+   
 }
 
 #top-nav {
@@ -63,8 +61,6 @@ ul {
 
 /* class styles----------------*/
 .main-header {
-    padding-top: 170px;
-    height: 500px;
     background: 
         linear-gradient(0deg,#000,transparent 100%),
          black url('../img/header/bbhistory.jpg') no-repeat center;
@@ -98,7 +94,25 @@ a:link {
     
 
 /* ---- Layout Containers ---- */
+
+
 .container {
-    width: 80%;
-    margin: 0 auto;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+
+/* ================================= 
+  Media Queries
+==================================== */
+@media (min-width:769px){
+    .wrap {
+		min-height: calc(100vh - 89px);
+	}
+    .container {
+        width: 80%;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
 }
