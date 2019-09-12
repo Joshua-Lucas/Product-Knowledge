@@ -20,20 +20,6 @@ h1 {
     text-shadow: 3px 3px 1px rgba(0,0,0,.8);
     }
 
-    
-li {
-    display:inline-block;
-    text-transform: capitalize;
-    font-size: 1.7rem;
-    background-color: whitesmoke;
-    border: 5px solid whitesmoke;
-    border-radius: 30%;
-    padding: 65px 25px;
-    margin: 25px 25px;
-    width: 25%;
-    height: 50px;
-}
-
 ul {
     height: 500px;
     text-align: center;
@@ -54,11 +40,6 @@ ul {
    
 }
 
-#top-nav {
-    width: 85%;
-}
-
-
 /* class styles----------------*/
 .main-header {
     background: 
@@ -67,8 +48,20 @@ ul {
     background-size: cover;
     }
 .main-header,
+
+/* Navigation Styles------------ */
+
 .main-nav {
     text-align: center;
+}
+.main-nav li {
+    text-transform: capitalize;
+    font-size: 1.7rem;
+    background-color: whitesmoke;
+    border: 5px solid whitesmoke;
+    border-radius: 30%;
+  
+}    
 
 /* } 
 .main-footer {
@@ -79,7 +72,7 @@ ul {
     background-size: cover;
     } */
 
-}    
+
 
 
 
@@ -114,5 +107,16 @@ a:link {
         max-width: 1000px;
         margin: 0 auto;
     }
+  
+
+    }
+    .main-nav li {
+        display: inline-block;
+        text-transform: capitalize;
+        font-size: 1.7rem;
+        
+    }   
+
+
 
 }
