@@ -3,6 +3,7 @@
 ==================================== */
 * {
     box-sizing: border-box;
+    border: solid 1px white;
   }
 
 body{
@@ -46,16 +47,17 @@ ul {
         linear-gradient(0deg,#000,transparent 100%),
          black url('../img/header/bbhistory.jpg') no-repeat center;
     background-size: cover;
+    text-align: center;
     }
-.main-header,
+
 
 /* Navigation Styles------------ */
 
 .main-nav {
     text-align: center;
+    text-transform: capitalize;
 }
 .main-nav li {
-    text-transform: capitalize;
     font-size: 1.7rem;
     background-color: whitesmoke;
     border: 5px solid whitesmoke;
@@ -95,24 +97,51 @@ a:link {
 }
 
 
+
 /* ================================= 
   Media Queries
 ==================================== */
 @media (min-width:769px){
     .wrap {
 		min-height: calc(100vh - 89px);
-	}
+    }
+    
     .container {
         width: 80%;
         max-width: 1000px;
         margin: 0 auto;
     }
   
-
-    }
     .main-nav li {
-        display: inline-block;
         text-transform: capitalize;
         font-size: 1.7rem;
         
     }   
+
+    .top-nav {
+        float: right;
+        width: 100%;
+    }
+
+    .second-nav,
+    .third-nav,
+    .bottom-nav {
+        float: right;
+        width: 30%;
+
+    }
+
+
+
+
+
+	/* ---- Float clearfix ---- */
+
+	.clearfix::after {
+		content: " ";
+		display: table;
+		clear: both;
+	}
+
+
+}
