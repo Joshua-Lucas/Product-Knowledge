@@ -1,4 +1,18 @@
 /* ================================= 
+ Fonts
+==================================== */
+@font-face {
+    font-family: "trade-gothic-bold";
+    src: url("/fonts/trade-gothic/trade-gothic-bold.ttf") format('truetype');
+} 
+@font-face{
+    font-family: "proxima-nova-light";
+    src: url("/fonts/proxima-nova/proxima-nova-regular.otf") format(opentype);
+}
+
+
+
+/* ================================= 
   Base Element Styles
 ==================================== */
 * {
