@@ -65,7 +65,7 @@ ul {
 .main-header {
     background: 
         linear-gradient(0deg,#000,transparent 100%),
-         black url('../img/header/bbhistory.jpg') no-repeat center;
+         black url('../img/header/white-high-background.jpg') no-repeat center;
     background-size: cover;
     text-align: center;
     }
