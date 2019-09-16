@@ -1,4 +1,26 @@
 /* ================================= 
+ Fonts
+==================================== */
+@font-face {
+    font-family: "trade-gothic-bold";
+    src: url("../fonts/trade-gothic/trade-gothic-bold.ttf") format('truetype');
+} 
+@font-face{
+    font-family: "proxima-nova-regular";
+    src: url("../fonts/proxima-nova/proxima-nova-regular.otf") format(opentype);
+}
+
+@font-face{
+    font-family: "proxima-nova-bold";
+    src: url("../fonts/proxima-nova/proxima-nova-bold.otf") format(opentype);
+}
+
+@font-face{
+    font-family: "proxima-nova-light";
+    src: url("../fonts/proxima-nova/proxima-nova-light.otf") format(opentype);
+}
+
+/* ================================= 
   Base Element Styles
 ==================================== */
 * {
@@ -8,11 +30,11 @@
 body{
     background: #000;
     color: #878787;
-    font: 1em/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font: 1em/1.5 "proxima-nova-light",Helvetica, Arial, sans-serif;
 }
 
 h1 {  
-    font-size: 4rem;
+    font: 4rem "trade-gothic-bold",Helvetica, Arial, sans-serif;
     color: rgba(255, 255, 255, 1);
     text-transform: uppercase;
     font-weight: normal;
@@ -25,7 +47,6 @@ ul {
     text-align: center;
     margin: auto;
     border-bottom: 2px dotted gray;
-    padding: 100px 0 100px;
     background: black;
 } 
 
@@ -46,20 +67,22 @@ ul {
         linear-gradient(0deg,#000,transparent 100%),
          black url('../img/header/bbhistory.jpg') no-repeat center;
     background-size: cover;
+    text-align: center;
     }
-.main-header,
+
 
 /* Navigation Styles------------ */
 
 .main-nav {
     text-align: center;
+    text-transform: capitalize;
 }
 .main-nav li {
-    text-transform: capitalize;
     font-size: 1.7rem;
     background-color: whitesmoke;
     border: 5px solid whitesmoke;
     border-radius: 30%;
+    margin: 1em;
   
 }    
 
@@ -81,7 +104,8 @@ ul {
 
 a:link {
     text-decoration: none;
-    color: white;
+    color: #000;
+    font-family: 'proxima-nova-light'
 
 } 
     
@@ -95,24 +119,50 @@ a:link {
 }
 
 
+
 /* ================================= 
   Media Queries
 ==================================== */
 @media (min-width:769px){
     .wrap {
 		min-height: calc(100vh - 89px);
-	}
+    }
+    
     .container {
         width: 80%;
         max-width: 1000px;
         margin: 0 auto;
     }
   
-
-    }
     .main-nav li {
-        display: inline-block;
         text-transform: capitalize;
         font-size: 1.7rem;
         
     }   
+
+    .top-nav {
+        float: right;
+        width: 100%;
+    }
+
+    #second-nav,
+    #third-nav,
+    #bottom-nav {
+        display:inline-block;
+        width: 100%;
+    }
+
+
+
+
+
+	/* ---- Float clearfix ---- */
+
+	.clearfix::after {
+		content: " ";
+		display: table;
+		clear: both;
+	}
+
+
+}
