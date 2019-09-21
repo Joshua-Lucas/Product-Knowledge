@@ -28,6 +28,8 @@
   }
 
 body{
+    display: flex;
+    flex-direction: column;
     background: #000;
     color: #878787;
     font: 1em/1.5 "proxima-nova-light",Helvetica, Arial, sans-serif;
@@ -43,9 +45,7 @@ h1 {
     }
 
 ul {
-    height: 500px;
     text-align: center;
-    margin: auto;
     border-bottom: 2px dotted gray;
     background: black;
 } 
@@ -82,7 +82,6 @@ ul {
     background-color: whitesmoke;
     border: 5px solid whitesmoke;
     border-radius: 30%;
-    margin: 1em;
   
 }    
 
@@ -110,12 +109,12 @@ a:link {
 } 
     
 
-/* ---- Layout Containers ---- */
+/* ================================= 
+ FlexBox
+==================================== */
 
-
-.container {
-    padding-left: 1em;
-    padding-right: 1em;
+.main-nav {
+    display: flex;
 }
 
 
@@ -124,33 +123,8 @@ a:link {
   Media Queries
 ==================================== */
 @media (min-width:769px){
-    .wrap {
-		min-height: calc(100vh - 89px);
-    }
-    
-    .container {
-        width: 80%;
-        max-width: 1000px;
-        margin: 0 auto;
-    }
   
-    .main-nav li {
-        text-transform: capitalize;
-        font-size: 1.7rem;
-        
-    }   
-
-    .top-nav {
-        float: right;
-        width: 100%;
-    }
-
-    #second-nav,
-    #third-nav,
-    #bottom-nav {
-        display:inline-block;
-        width: 100%;
-    }
+    
 
 
 
