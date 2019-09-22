@@ -28,11 +28,10 @@
   }
 
 body{
-    display: flex;
-    flex-direction: column;
     background: #000;
-    color: #878787;
+    color: white;
     font: 1em/1.5 "proxima-nova-light",Helvetica, Arial, sans-serif;
+    min-height: 100vh;
 }
 
 h1 {  
@@ -46,9 +45,15 @@ h1 {
 
 ul {
     text-align: center;
-    border-bottom: 2px dotted gray;
     background: black;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 } 
+
+p {
+    font-size: 1.1em;
+}
 
 /* ================================= 
   Base Layout Styles
@@ -57,8 +62,8 @@ ul {
 /* id Styles-------------------- */
 #intro {
     color:gainsboro;
-    padding: 50px;
-   
+    padding: 1em;
+    margin: 0;
 }
 
 /* class styles----------------*/
@@ -68,8 +73,14 @@ ul {
          black url('../img/header/white-high-background.jpg') no-repeat center;
     background-size: cover;
     text-align: center;
+    padding-top:1.7em;
+    margin-bottom: 1.7em;
     }
 
+.main-footer {
+    font-size: .6em;
+    text-align: center;
+}
 
 /* Navigation Styles------------ */
 
@@ -78,55 +89,98 @@ ul {
     text-transform: capitalize;
 }
 .main-nav li {
-    font-size: 1.7rem;
-    background-color: whitesmoke;
-    border: 5px solid whitesmoke;
-    border-radius: 30%;
-  
+    font-size: 1.7em;
+    background-color:white;
+    border: 5px solid black;
+    border-radius: 40% 60%;
+    text-decoration: none;
+    margin: 1em;
+    box-shadow: 5px 3px white;
+
 }    
-
-/* } 
-.main-footer {
-    height: 100px;
-    background: 
-        linear-gradient(0deg,#000,transparent 100%),
-         #ffa949 url('../img/header/bbhistory.jpg') no-repeat center;
-    background-size: cover;
-    } */
-
-
-
-
-
 
 /* pdudeo class------------------ */
 
-a:link {
+a {
     text-decoration: none;
-    color: #000;
-    font-family: 'proxima-nova-light'
-
+    color: black;
+    font-family: 'proxima-nova-light';
+    height: 100px;
+    width: 100px;
+    padding-right: 2em;
+    padding-left:  2em;
 } 
+
+a:hover {
+    color: cyan;
+}
+
+a:active {
+    color: cyan;
+}
     
 
 /* ================================= 
  FlexBox
 ==================================== */
-
-.main-nav {
+body {
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
+.launchpad {
+    flex: 3;
+}
 
 
 /* ================================= 
   Media Queries
 ==================================== */
 @media (min-width:769px){
-  
-    
+
+/*------------ Index.html -----------*/
+a {
+    padding: 0;
+}
+
+#intro {
+    margin: auto;
+    width: 80%;
+
+}
 
 
+
+.launchpad{
+    display: flex;
+
+}
+.main-nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+    flex: 0 80%;
+    margin: auto;
+}
+
+.nav{
+    align-self: center;
+    flex: 1;
+}
+
+.top {
+    flex: 1 100%   
+}
+
+.second,
+.third,
+.fourth {
+    align-self: flex-start;
+
+}
 
 
 
