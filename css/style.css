@@ -55,6 +55,13 @@ p {
     font-size: 1.1em;
 }
 
+h2 {
+    font: 2rem "proxima-nova-bold",Helvetica, Arial, sans-serif;
+    color: rgba(255, 255, 255, 1);
+    text-transform: uppercase;
+    text-shadow: 3px 3px 1px rgba(0,0,0,.8);
+}
+
 /* ================================= 
   Base Layout Styles
 ==================================== */
@@ -82,6 +89,12 @@ p {
     text-align: center;
 }
 
+.astyle{
+    margin: 0;
+    text-align: center;
+}
+
+
 /* Navigation Styles------------ */
 
 .main-nav {
@@ -103,7 +116,7 @@ p {
 
 a {
     text-decoration: none;
-    color: black;
+    color: white;
     font-family: 'proxima-nova-light';
     height: 100px;
     width: 100px;
@@ -112,13 +125,9 @@ a {
 } 
 
 a:hover {
-    color: cyan;
+    zoom: 1.2;
 }
 
-a:active {
-    color: cyan;
-}
-    
 
 /* ================================= 
  FlexBox
@@ -154,8 +163,19 @@ a {
 
 .launchpad{
     display: flex;
-
+    justify-content: center;
 }
+.training {
+    display: flex;
+    flex: 0 80%;
+    justify-content: center;
+    align-items: center;
+    background: 
+        linear-gradient(0deg,#000,transparent 100%),
+         black url('../img/red-white-stacked.jpg') no-repeat center;
+    
+}
+
 .main-nav {
     display: flex;
     flex-direction: row;
