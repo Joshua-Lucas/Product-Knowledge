@@ -97,6 +97,22 @@ h2 {
 
 /* Navigation Styles------------ */
 
+.nav-one {
+    background: 
+        linear-gradient(0deg,#000,transparent 100%),
+         black url('../img/header/white-high-background.jpg') no-repeat center;
+    
+}
+
+
+.nav-second{
+    background: 
+    linear-gradient(0deg,#000,transparent 100%),
+     black url('../img/history_1.jpg') no-repeat ;
+     text-align: center;
+}
+
+
 .main-nav {
     text-align: center;
     text-transform: capitalize;
@@ -162,19 +178,24 @@ a {
 
 
 .launchpad{
+    width: 85%;
+    align-self: center;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-}
-.training {
-    display: flex;
-    flex: 0 80%;
-    justify-content: center;
-    align-items: center;
-    background: 
-        linear-gradient(0deg,#000,transparent 100%),
-         black url('../img/red-white-stacked.jpg') no-repeat center;
     
 }
+.nav-one {
+    display: flex;
+    flex: 1 80%;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
 
 .main-nav {
     display: flex;
