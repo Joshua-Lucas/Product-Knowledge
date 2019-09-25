@@ -97,19 +97,23 @@ h2 {
 
 /* Navigation Styles------------ */
 
-.nav-one {
+.one {
     background: 
         linear-gradient(0deg,#000,transparent 100%),
          black url('../img/header/white-high-background.jpg') no-repeat center;
+
+    height: 300px;
     
 }
 
 
-.nav-second{
+.second{
     background: 
     linear-gradient(0deg,#000,transparent 100%),
-     black url('../img/history_1.jpg') no-repeat ;
+     black url('../img/history_2.jpg') no-repeat center;
      text-align: center;
+    max-width:90%;
+    height: 300px;
 }
 
 
@@ -134,8 +138,6 @@ a {
     text-decoration: none;
     color: white;
     font-family: 'proxima-nova-light';
-    height: 100px;
-    width: 100px;
     padding-right: 2em;
     padding-left:  2em;
 } 
@@ -155,7 +157,16 @@ body {
 }
 
 .launchpad {
-    flex: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav {
+    flex: 1;
+    align-self: stretch;
+
+
 }
 
 
