@@ -31,7 +31,7 @@ body{
     background: #000;
     color: white;
     font: 1em/1.5 "proxima-nova-light",Helvetica, Arial, sans-serif;
-    min-height: 100vh;
+    height: 100vh;
 }
 
 h1 {  
@@ -101,8 +101,6 @@ h2 {
     background: 
         linear-gradient(0deg,#000,transparent 100%),
          black url('../img/header/white-high-background.jpg') no-repeat center;
-
-    height: 300px;
     
 }
 
@@ -112,8 +110,6 @@ h2 {
     linear-gradient(0deg,#000,transparent 100%),
      black url('../img/history_2.jpg') no-repeat center;
      text-align: center;
-    max-width:90%;
-    height: 300px;
 }
 
 
@@ -138,8 +134,6 @@ a {
     text-decoration: none;
     color: white;
     font-family: 'proxima-nova-light';
-    padding-right: 2em;
-    padding-left:  2em;
 } 
 
 a:hover {
@@ -148,92 +142,57 @@ a:hover {
 
 
 /* ================================= 
- FlexBox
+Grid Layout
 ==================================== */
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    display: grid;
+    grid-template-rows: 100px 2fr 100px;
+    grid-gap: 25px;
+    grid-template-areas: 
+        "head"
+        "lp"
+        "foot";
+
 }
 
+.header {
+    grid-area: head;
+}
 .launchpad {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    grid-area: lp;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 20px;
+    grid-template-areas: 
+        "one"
+        "second"
+        "third"
+        "fourth";
 }
 
-.nav {
-    flex: 1;
-    align-self: stretch;
-
-
+.main-footer{
+    grid-area: foot;
 }
 
+.one{
+    grid-area: one;
+}
+
+.second {
+    grid-area: second;
+}
+
+.third {
+    grid-area: third;
+}
+
+.fourth {
+    grid-area: fourth;
+}
 
 /* ================================= 
   Media Queries
 ==================================== */
-@media (min-width:769px){
-
-/*------------ Index.html -----------*/
-a {
-    padding: 0;
-}
-
-#intro {
-    margin: auto;
-    width: 80%;
-
-}
-
-
-
-.launchpad{
-    width: 85%;
-    align-self: center;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    
-}
-.nav-one {
-    display: flex;
-    flex: 1 80%;
-    justify-content: center;
-    align-items: center;
-}
-
-
-
-
-
-
-.main-nav {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-content: center;
-    flex: 0 80%;
-    margin: auto;
-}
-
-.nav{
-    align-self: center;
-    flex: 1;
-}
-
-.top {
-    flex: 1 100%   
-}
-
-.second,
-.third,
-.fourth {
-    align-self: flex-start;
-
-}
-
 
 
 	/* ---- Float clearfix ---- */
@@ -243,6 +202,6 @@ a {
 		display: table;
 		clear: both;
 	}
-
+    
 
 }
