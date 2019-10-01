@@ -35,7 +35,7 @@ body{
 }
 
 h1 {  
-    font: 4rem "trade-gothic-bold",Helvetica, Arial, sans-serif;
+    font: 4em "trade-gothic-bold",Helvetica, Arial, sans-serif;
     color: rgba(255, 255, 255, 1);
     text-transform: uppercase;
     font-weight: normal;
@@ -77,7 +77,6 @@ h2 {
 .main-header {
     background: 
         linear-gradient(0deg,#000,transparent 100%),
-         black url('../img/header/white-high-background.jpg') no-repeat center;
     background-size: cover;
     text-align: center;
     padding-top:1.7em;
@@ -90,27 +89,13 @@ h2 {
 }
 
 .astyle{
-    margin: 0;
     text-align: center;
 }
 
 
 /* Navigation Styles------------ */
 
-.one {
-    background: 
-        linear-gradient(0deg,#000,transparent 100%),
-         black url('../img/header/white-high-background.jpg') no-repeat center;
-    
-}
 
-
-.second{
-    background: 
-    linear-gradient(0deg,#000,transparent 100%),
-     black url('../img/history_2.jpg') no-repeat center;
-     text-align: center;
-}
 
 
 .main-nav {
@@ -140,13 +125,16 @@ a:hover {
     zoom: 1.2;
 }
 
+.nav {
+    border: 2px solid white;
+}
 
 /* ================================= 
 Grid Layout
 ==================================== */
 body {
     display: grid;
-    grid-template-rows: 100px 2fr 100px;
+    grid-template-rows: 1fr 2fr 50px;
     grid-gap: 25px;
     grid-template-areas: 
         "head"
@@ -161,8 +149,8 @@ body {
 .launchpad {
     grid-area: lp;
     display: grid;
-    grid-template-rows: repeat(4, 1fr);
-    grid-gap: 20px;
+    grid-template-rows: repeat(4, auto-fit);
+    grid-gap: 10px;
     grid-template-areas: 
         "one"
         "second"
@@ -174,16 +162,22 @@ body {
     grid-area: foot;
 }
 
+/*---- Launchpad Grid -----*/
 .one{
     grid-area: one;
+    background: no-repeat center/100% url("../img/header/white-high-background.jpg");
 }
 
 .second {
+    display: flex;
     grid-area: second;
+    background: no-repeat center/100% url("../img/training/CONNECT_ARCHIVE.JPG" );
 }
 
 .third {
+    display: flex;
     grid-area: third;
+    background: no-repeat center/100% url("../img/shoe_anatomy.jpeg" );
 }
 
 .fourth {
