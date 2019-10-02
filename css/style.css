@@ -76,7 +76,7 @@ h2 {
 /* class styles----------------*/
 .main-header {
     background: 
-        linear-gradient(0deg,#000,transparent 100%),
+        linear-gradient(0deg,#000,transparent 100%),;
     background-size: cover;
     text-align: center;
     padding-top:1.7em;
@@ -164,29 +164,86 @@ body {
 
 /*---- Launchpad Grid -----*/
 .one{
+    display: flex;
+    justify-content: center;
     grid-area: one;
     background: no-repeat center/100% url("../img/header/white-high-background.jpg");
 }
 
 .second {
     display: flex;
+    justify-content: center;
     grid-area: second;
     background: no-repeat center/100% url("../img/training/CONNECT_ARCHIVE.JPG" );
 }
 
 .third {
     display: flex;
+    justify-content: center;
     grid-area: third;
     background: no-repeat center/100% url("../img/shoe_anatomy.jpeg" );
 }
 
 .fourth {
     grid-area: fourth;
+    justify-content: center;
+    display: flex;
+    background: no-repeat center/100% url("../img/shoe_wall.jpg" );
 }
 
 /* ================================= 
   Media Queries
 ==================================== */
+
+@media (min-width: 769px) {
+
+    .launchpad {
+        grid-area: lp;
+        display: grid;
+        grid-template-rows: 40% 30% 30%;
+        grid-gap: 10px;
+        grid-template-areas: 
+            "one"
+            "second"
+            "third"
+            "fourth";
+    }
+
+        /*---- Launchpad Grid -----*/
+    .one{
+        display: flex;
+        justify-content: center;
+        grid-area: one;
+        background: no-repeat center/100% url("../img/header/white-high-background.jpg");
+    }
+
+    .second {
+        display: flex;
+        justify-content: center;
+        grid-area: second;
+        background: no-repeat center/100% url("../img/training/CONNECT_ARCHIVE.JPG" );
+    }
+
+    .third {
+        display: flex;
+        justify-content: center;
+        grid-area: third;
+        background: no-repeat center/100% url("../img/shoe_anatomy.jpeg" );
+    }
+
+    .fourth {
+        grid-area: fourth;
+        justify-content: center;
+        display: flex;
+        background: no-repeat center/100% url("../img/shoe_wall.jpg" );
+    }
+
+
+
+
+
+}
+
 
 
 	/* ---- Float clearfix ---- */
