@@ -125,29 +125,20 @@ a:hover {
     zoom: 1.2;
 }
 
-.nav {
-    border: 2px solid white;
-}
+
 
 /* ================================= 
-Grid Layout
+Layout
 ==================================== */
 body {
-    display: grid;
-    grid-template-rows: 1fr 2fr 50px;
-    grid-gap: 25px;
-    grid-template-areas: 
-        "head"
-        "lp"
-        "foot";
-
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .header {
-    grid-area: head;
 }
 .launchpad {
-    grid-area: lp;
     display: grid;
     grid-template-rows: repeat(4, auto-fit);
     grid-gap: 10px;
@@ -156,10 +147,11 @@ body {
         "second"
         "third"
         "fourth";
+
 }
 
-.main-footer{
-    grid-area: foot;
+footer {
+    margin-top: auto;
 }
 
 /*---- Launchpad Grid -----*/
@@ -181,7 +173,7 @@ body {
     display: flex;
     justify-content: center;
     grid-area: third;
-    background: no-repeat center/100% url("../img/shoe_anatomy.jpeg" );
+    background: no-repeat center/100% url("../img/shoe_anatomy_2.jpg" );
 }
 
 .fourth {
@@ -198,15 +190,15 @@ body {
 @media (min-width: 769px) {
 
     .launchpad {
-        grid-area: lp;
+        flex: 1;
         display: grid;
-        grid-template-rows: 40% 30% 30%;
+        grid-template-rows: 50% 35% 35%;
+        grid-template-columns: repeat(2,1fr);
         grid-gap: 10px;
         grid-template-areas: 
-            "one"
-            "second"
-            "third"
-            "fourth";
+            "one one"
+            "second third "
+            "second fourth ";
     }
 
         /*---- Launchpad Grid -----*/
@@ -228,13 +220,13 @@ body {
         display: flex;
         justify-content: center;
         grid-area: third;
-        background: no-repeat center/100% url("../img/shoe_anatomy.jpeg" );
+        background: no-repeat center/100% url("../img/shoe_anatomy_2.jpg" );
     }
 
     .fourth {
-        grid-area: fourth;
         justify-content: center;
         display: flex;
+        grid-area: fourth;
         background: no-repeat center/100% url("../img/shoe_wall.jpg" );
     }
 
