@@ -131,17 +131,23 @@ a:hover {
 Layout
 ==================================== */
 body {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: 150px 2fr 50px;
+    grid-template-areas:
+    "head"
+    "lp"
+    "foot";
     min-height: 100vh;
 }
 
 .header {
+    grid-area: head;
 }
 .launchpad {
+    grid-area: lp;
     display: grid;
-    grid-template-rows: repeat(4, auto-fit);
-    grid-gap: 10px;
+    grid-template-rows: repeat(4, 2fr);
+    grid-gap: 15px;
     grid-template-areas: 
         "one"
         "second"
@@ -151,7 +157,9 @@ body {
 }
 
 footer {
-    margin-top: auto;
+    grid-area: foot;
+    display: flex;
+    margin: auto;
 }
 
 /*---- Launchpad Grid -----*/
@@ -181,6 +189,7 @@ footer {
     justify-content: center;
     display: flex;
     background: no-repeat center/100% url("../img/shoe_wall.jpg" );
+    background-size: cover;
 }
 
 /* ================================= 
@@ -190,11 +199,9 @@ footer {
 @media (min-width: 769px) {
 
     .launchpad {
-        flex: 1;
         display: grid;
-        grid-template-rows: 50% 35% 35%;
+        grid-template-rows: 250px 150px 150px;
         grid-template-columns: repeat(2,1fr);
-        grid-gap: 10px;
         grid-template-areas: 
             "one one"
             "second third "
@@ -247,4 +254,3 @@ footer {
 	}
     
 
-}
