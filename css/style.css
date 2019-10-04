@@ -167,14 +167,22 @@ footer {
     display: flex;
     justify-content: center;
     grid-area: one;
-    background: no-repeat center/100% url("../img/header/white-high-background.jpg");
+    background: 
+        url("../img/header/white-high-background.jpg")
+        center;
 }
 
 .second {
     display: flex;
     justify-content: center;
     grid-area: second;
-    background: no-repeat center/100% url("../img/training/CONNECT_ARCHIVE.JPG" );
+    background: url("../img/training/CONNECT_ARCHIVE.JPG" )
+            center/100%
+            cover
+            no-repeat
+            border-box
+            content-box
+            ;
 }
 
 .third {
@@ -220,7 +228,14 @@ footer {
         display: flex;
         justify-content: center;
         grid-area: second;
-        background: no-repeat center/100% url("../img/training/CONNECT_ARCHIVE.JPG" );
+        background: url("../img/training/CONNECT_ARCHIVE.JPG" )
+            center/ cover
+            scroll
+            no-repeat round
+            border-box
+            content-box
+            ;
+
     }
 
     .third {
