@@ -231,7 +231,7 @@ footer {
         background: url("../img/training/CONNECT_ARCHIVE.JPG" )
             center/ cover
             scroll
-            no-repeat round
+            no-repeat
             border-box
             content-box
             ;
