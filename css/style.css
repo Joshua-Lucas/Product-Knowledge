@@ -21,8 +21,10 @@
 }
 
 /* ================================= 
-  Base Element Styles
+  Base Styles
 ==================================== */
+/* Element Styles------------ */
+
 * {
     box-sizing: border-box;
   }
@@ -56,22 +58,19 @@ p {
 }
 
 h2 {
-    font: 2rem "proxima-nova-bold",Helvetica, Arial, sans-serif;
+    font: 2em "proxima-nova-bold",Helvetica, Arial, sans-serif;
     color: rgba(255, 255, 255, 1);
     text-transform: uppercase;
-    text-shadow: 3px 3px 1px rgba(0,0,0,.8);
+    -webkit-text-stroke: .2px #ffffff;
+    text-shadow: 5px 5px 1px rgba(0,0,0,.8);
 }
 
-/* ================================= 
-  Base Layout Styles
-==================================== */
+a {
+    text-decoration: none;
+    color: white;
+    font-family: 'proxima-nova-light';
+} 
 
-/* id Styles-------------------- */
-#intro {
-    color:gainsboro;
-    padding: 1em;
-    margin: 0;
-}
 
 /* class styles----------------*/
 .main-header {
@@ -96,34 +95,13 @@ h2 {
 /* Navigation Styles------------ */
 
 
-
-
 .main-nav {
     text-align: center;
     text-transform: capitalize;
 }
-.main-nav li {
-    font-size: 1.7em;
-    background-color:white;
-    border: 5px solid black;
-    border-radius: 40% 60%;
-    text-decoration: none;
-    margin: 1em;
-    box-shadow: 5px 3px white;
-
-}    
+    
 
 /* pdudeo class------------------ */
-
-a {
-    text-decoration: none;
-    color: white;
-    font-family: 'proxima-nova-light';
-} 
-
-a:hover {
-    zoom: 1.2;
-}
 
 
 
@@ -132,7 +110,7 @@ Layout
 ==================================== */
 body {
     display: grid;
-    grid-template-rows: 150px 2fr 50px;
+    grid-template-rows: 200px 2fr 50px;
     grid-template-areas:
     "head"
     "lp"
@@ -169,7 +147,12 @@ footer {
     grid-area: one;
     background: 
         url("../img/header/white-high-background.jpg")
-        center;
+        center/ cover
+        scroll
+        no-repeat
+        border-box
+        content-box;
+
 }
 
 .second {
@@ -177,87 +160,112 @@ footer {
     justify-content: center;
     grid-area: second;
     background: url("../img/training/CONNECT_ARCHIVE.JPG" )
-            center/100%
-            cover
-            no-repeat
-            border-box
-            content-box
-            ;
+        center/ cover
+        scroll
+        no-repeat
+        border-box
+        content-box
+    ;
 }
 
 .third {
     display: flex;
     justify-content: center;
     grid-area: third;
-    background: no-repeat center/100% url("../img/shoe_anatomy_2.jpg" );
+    background: url("../img/shoe_anatomy_2.jpg")
+        center/cover
+        no-repeat
+        scroll
+        border-box
+        content-box;
 }
 
 .fourth {
     grid-area: fourth;
     justify-content: center;
     display: flex;
-    background: no-repeat center/100% url("../img/shoe_wall.jpg" );
-    background-size: cover;
+    background: url("../img/shoe_wall.jpg" )
+        center/cover
+        no-repeat
+        scroll
+        border-box
+        content-box;
 }
 
 /* ================================= 
   Media Queries
 ==================================== */
 
-@media (min-width: 769px) {
+@media (min-width: 593px) {
+    body {
+        grid-template-rows: 150px 2fr 50px;
+    }
 
+}
+
+@media (min-width: 769px) {
+   
     .launchpad {
         display: grid;
-        grid-template-rows: 250px 150px 150px;
-        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: 200px 150px 150px;
+        grid-template-columns: repeat(3,1fr);
         grid-template-areas: 
-            "one one"
-            "second third "
-            "second fourth ";
+            "one one one"
+            "second second third "
+            "fourth fourth fourth ";
     }
 
         /*---- Launchpad Grid -----*/
     .one{
         display: flex;
+        flex-direction: column;
         justify-content: center;
         grid-area: one;
-        background: no-repeat center/100% url("../img/header/white-high-background.jpg");
     }
+
 
     .second {
         display: flex;
+        flex-direction: column;
         justify-content: center;
         grid-area: second;
-        background: url("../img/training/CONNECT_ARCHIVE.JPG" )
-            center/ cover
-            scroll
-            no-repeat
-            border-box
-            content-box
-            ;
-
     }
 
     .third {
         display: flex;
+        flex-direction: column;
         justify-content: center;
         grid-area: third;
-        background: no-repeat center/100% url("../img/shoe_anatomy_2.jpg" );
     }
 
     .fourth {
-        justify-content: center;
         display: flex;
+        flex-direction: column;
+        justify-content: center;
         grid-area: fourth;
-        background: no-repeat center/100% url("../img/shoe_wall.jpg" );
     }
 
-
-
-
+    a:hover {
+        zoom: 1.2;
+    }
+    
 
 }
 
+@media (min-width: 1020px) {
+    .launchpad{
+    grid-template-columns: repeat(2,1fr);
+    grid-template-areas: 
+        "one one"
+        "second third "
+        "second fourth  ";
+    }
+
+    .astyle {
+        font-size: 2.7em;
+    }
+
+}
 
 
 	/* ---- Float clearfix ---- */
