@@ -65,6 +65,7 @@ h2 {
     text-shadow: 5px 5px 1px rgba(0,0,0,.8);
 }
 
+
 a {
     text-decoration: none;
     color: white;
@@ -284,40 +285,60 @@ footer {
         grid-gap: 15px;
         grid-template-areas: 
         " man man man ."
-        "up . . lin"
-        ". out out out"
+        "up . lin lin"
+        "out out . ."
         "lea .  text . "
-        ". other other other";
+        ". . other other";
 
     }
 
     #man{
-        grid-area: man
+        grid-area: man;
     }
 
     #up{
-        grid-area: up
+        grid-area: up;
     }
 
     #lin{
-        grid-area: lin
+        grid-area: lin;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 5px;
+        grid-template-areas:
+        "img tex";
+
     }
+        
+            .sa_img {
+                grid-area: img;
+                margin:auto;
+                border: solid 2px white;
+            }
+
+            .sa_text {
+                grid-area: tex;
+                display:flex;
+                flex-direction: column;
+                margin-right: auto;
+                margin-bottom: auto;
+            }
 
 
     #out{
-        grid-area: out
+        grid-area: out;
     }
 
     #lea{
-        grid-area: lea
+        grid-area: lea;
     }
 
     #text{
-        grid-area: text
+        grid-area: text;
     }
 
     #other{
-        grid-area: other
+        grid-area: other;
     }
 
 }
