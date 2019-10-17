@@ -93,15 +93,20 @@ a {
 }
 
 .other-header {
-        background: 
-            linear-gradient(0deg,#000,transparent 100%);
-        background-size: cover;
-        text-align: center;
-        padding-top:1.7em;
-        margin-bottom: 1.7em;
-
-
+    background: 
+        linear-gradient(0deg,#000,transparent 100%);
+    background-size: cover;
+    padding-top:1.7em;
+    margin-bottom: 1.7em;
 }
+
+    .side_head {
+        font-size: 10em;
+        margin-right: 50vh;
+        
+
+    }  
+
 .continer {
     margin: auto;
 
@@ -216,11 +221,13 @@ footer {
     height: 100vh;
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
+
 }
 
-.container {
+/*.container {
     margin: auto;
-}
+}*/
 
 
 /* ================================= 
@@ -313,16 +320,16 @@ footer {
             .sa_img {
                 grid-area: img;
                 margin:auto;
-                border: solid 2px white;
+                
             }
 
             .sa_text {
                 grid-area: tex;
                 display:flex;
                 flex-direction: column;
-                margin-right: auto;
-                margin-bottom: auto;
+                justify-content: center;
             }
+            
 
 
     #out{
