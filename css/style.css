@@ -100,12 +100,6 @@ a {
     margin-bottom: 1.7em;
 }
 
-    .side_head {
-        font-size: 10em;
-        margin-right: 50vh;
-        
-
-    }  
 
 .continer {
     margin: auto;
@@ -217,17 +211,20 @@ footer {
 
 /* sa page------------------ */
 
+
+
 .other-header{
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    text-align: center;
+    display:flex;
+    padding-top:1.7em;
+    margin-bottom: 1.7em;
 
 }
 
-/*.container {
-    margin: auto;
-}*/
+    .container {
+        margin: auto;
+    }
 
 
 /* ================================= 
@@ -284,6 +281,25 @@ footer {
     }
 
 /* ---- SA Layout ---- */
+
+    .other-header{
+        height: 100vh;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding-top:1.7em;
+        margin-bottom: 1.7em;    
+    }
+        .container {
+            margin: 0;
+        }
+
+        .side_head {
+            font-size: 9em;
+            margin-right: 50vw;
+        }  
+
 
     .man {
         display: grid;
@@ -361,6 +377,12 @@ footer {
 
     .astyle {
         font-size: 2.7em;
+    }
+
+
+/*----SA PAGE-----*/
+    .side_head{
+    font-size: 10em;
     }
 
 }
