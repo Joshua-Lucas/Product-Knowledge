@@ -96,7 +96,6 @@ a {
     background: 
         linear-gradient(0deg,#000,transparent 100%);
     background-size: cover;
-    padding-top:1.7em;
     margin-bottom: 1.7em;
 }
 
@@ -217,8 +216,13 @@ footer {
     height: 100vh;
     text-align: center;
     display:flex;
-    padding-top:1.7em;
     margin-bottom: 1.7em;
+    background: url("../img/sa_img.png" )
+    center/cover
+    no-repeat
+    scroll
+    border-box
+    content-box;
 
 }
 
