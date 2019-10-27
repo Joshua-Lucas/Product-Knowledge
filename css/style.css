@@ -284,25 +284,12 @@ footer {
         grid-area: fourth;
     }
 
-/* ---- SA Layout ---- */
+    /* ---- SA Layout ---- */
 
-    .other-header{
-        height: 100vh;
-        text-align: left;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        padding-top:1.7em;
-        margin-bottom: 1.7em;    
-    }
-        .container {
-            margin: 0;
-        }
 
         .side_head {
-            line-height: 90%;
-            font-size: 9em;
-            margin-right: 50vw;
+           font-size: 5em;
+
         }  
 
 
@@ -385,15 +372,14 @@ footer {
     }
 
 
-/*----SA PAGE-----*/
-    .side_head{
-    font-size: 10em;
-    }
+    /*----SA PAGE-----*/
 
-}
+    .side_head {
+        font-size: 6em;
 
+     }  
 
-	/* ---- Float clearfix ---- */
+/* ---- Float clearfix ---- */
 
 	.clearfix::after {
 		content: " ";
