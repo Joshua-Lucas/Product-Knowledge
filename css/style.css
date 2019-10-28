@@ -217,7 +217,7 @@ footer {
     text-align: center;
     display:flex;
     margin-bottom: 1.7em;
-    background: url("../img/sa_img.png" )
+    background: url("../img/sa_header2.png" )
     center/cover
     no-repeat
     scroll
@@ -388,3 +388,4 @@ footer {
 	}
     
 
+}
