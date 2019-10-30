@@ -105,6 +105,33 @@ a {
 
 }
 
+/* sa page------------------ */
+
+
+
+.other-header{
+    height: 100vh;
+    text-align: center;
+    display:flex;
+    margin-bottom: 1.7em;
+    background: url("../img/sa_header2.png" )
+    center/cover
+    no-repeat
+    scroll
+    border-box
+    content-box;
+
+}
+
+    .container {
+        margin: auto;
+    }
+
+.partsCont {
+    margin:1em;
+}    
+
+
 /* Navigation Styles------------ */
 
 
@@ -113,8 +140,6 @@ a {
     text-transform: capitalize;
 }
     
-
-/* pdudeo class------------------ */
 
 
 
@@ -207,27 +232,15 @@ footer {
     display: flex;
     margin: auto;
 }
-/* sa page------------------ */
 
+/*------- SA PAGE LAYOUT -----------*/
 
-
-.other-header{
-    height: 100vh;
-    text-align: center;
-    display:flex;
-    margin-bottom: 1.7em;
-    background: url("../img/sa_header2.png" )
-    center/cover
-    no-repeat
-    scroll
-    border-box
-    content-box;
-
-}
-
-    .container {
-        margin: auto;
+    .partsCont{
+        display: flex;
+        flex-direction: column;
     }
+
+
 
 
 /* ================================= 
@@ -283,77 +296,98 @@ footer {
         grid-area: fourth;
     }
 
-    /* ---- SA Layout ---- */
+
+    /* ---- SA PAGE ----- */
+
+    .partsCont {
+        margin:1.5em;
+    }    
+
+
+
+        /* ---- SA Layout ---- */
 
 
         .side_head {
-           font-size: 5em;
+            font-size: 5em;
 
         }  
 
 
-    .man {
-        display: grid;
-        grid-template-rows: repeat(5, 1fr);
-        grid-template-columns: repeat(4, 1fr);
-        grid-gap: 15px;
-        grid-template-areas: 
-        " man man man ."
-        "up . lin lin"
-        "out out . ."
-        "lea .  text . "
-        ". . other other";
+        .man {
+            display: grid;
+            grid-template-rows: repeat(5, 1fr);
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 15px;
+            grid-template-areas: 
+            " man man man ."
+            "up . lin lin"
+            "out out . ."
+            "lea .  text . "
+            ". . other other";
 
-    }
+        }
 
-    #man{
-        grid-area: man;
-    }
+        #man{
+            grid-area: man;
+        }
 
-    #up{
-        grid-area: up;
-    }
+        #up{
+            grid-area: up;
+        }
 
-    #lin{
-        grid-area: lin;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 5px;
-        grid-template-areas:
-        "img tex";
+        #lin{
+            grid-area: lin;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 5px;
+            grid-template-areas:
+            "img tex";
 
-    }
-        
-            .sa_img {
-                grid-area: img;
-                margin:auto;
-                
-            }
-
-            .sa_text {
-                grid-area: tex;
-                display:flex;
-                flex-direction: column;
-                justify-content: center;
-            }
+        }
             
+                .sa_img {
+                    grid-area: img;
+                    margin:auto;
+                    
+                }
+
+                .sa_text {
+                    grid-area: tex;
+                    display:flex;
+                    flex-direction: column;
+                    justify-content: center;
+                }
+                
 
 
-    #out{
-        grid-area: out;
-    }
+        #out{
+            grid-area: out;
+        }
 
-    #lea{
-        grid-area: lea;
-    }
+        #lea{
+            grid-area: lea;
+        }
 
-    #text{
-        grid-area: text;
-    }
+        #text{
+            grid-area: text;
+        }
 
-    #other{
-        grid-area: other;
-    }
+        #other{
+            grid-area: other;
+        }
+
+        .layoutOne {
+            display: flex;
+            justify-content: space-around;
+        }
+            .lo1i {
+                align-self: center;
+                margin-right: 1em;
+            }
+          
+
+
 
 }
 
@@ -377,6 +411,10 @@ footer {
         font-size: 6em;
 
      }  
+
+    .partsCont {
+        margin:2em;
+    }    
 
 /* ---- Float clearfix ---- */
 
