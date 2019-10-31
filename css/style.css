@@ -207,7 +207,7 @@ Layout
         display: flex;
         justify-content: center;
         grid-area: third;
-        background: url("../img/detail_type2.jpg")
+        background: url("../img/sa_header2.png")
             center/cover
             no-repeat
             scroll
@@ -385,6 +385,12 @@ footer {
             .lo1i {
                 align-self: center;
                 margin-right: 1em;
+            }
+            
+
+            .lo1 {
+                align-self: center;
+
             }
           
 
